@@ -1,0 +1,24 @@
+.input__content {
+    margin: 24px 0;
+}
+
+.input__label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.input__data {
+    background: #fff;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    mix-blend-mode: normal;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.input__data:focus {
+    outline: none;
+}
