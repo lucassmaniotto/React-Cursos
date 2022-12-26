@@ -4,7 +4,7 @@ import Select from "../Select";
 import Button from "../Button";
 import { useState } from "react";
 
-const Form = () => {
+const Form = (props) => {
 
     const crews = [
         '',
@@ -24,7 +24,12 @@ const Form = () => {
 
     const onSave = (event) => {
         event.preventDefault();
-        console.log('Submetido =>', name, charge, image, crew);
+        props.forRegisteredUser({ 
+            name, 
+            charge, 
+            image, 
+            crew 
+        });
     }
 
     return (
