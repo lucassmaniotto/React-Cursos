@@ -1,6 +1,7 @@
 import "./index.css";
 import Input from "../Input";
 import Select from "../Select";
+import Button from "../Button";
 
 const Form = () => {
 
@@ -23,6 +24,7 @@ const Form = () => {
                 <Input label="Cargo" placeholder="Digite seu cargo" />
                 <Input label="Imagem" placeholder="Informe o endereço da imagem" />
                 <Select label="Time" itens={crews}/>
+                <Button>Criar card</Button>
             </form>
         </section>
     )
