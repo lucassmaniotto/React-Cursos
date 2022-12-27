@@ -45,6 +45,8 @@ function App() {
 
   const [users, setUsers] = useState([]);
 
+  const crewNames = crews.map(crew => crew.name);
+
   const forNewAddedUser = (user) => {
     setUsers([...users, user]);
   };
@@ -52,7 +54,7 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Form forRegisteredUser={user => forNewAddedUser(user)}/>
+      <Form crews={crewNames} forRegisteredUser={user => forNewAddedUser(user)}/>
 
       {crews.map (crew => (
         <Crew 

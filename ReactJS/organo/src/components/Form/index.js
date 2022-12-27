@@ -5,18 +5,6 @@ import Button from "../Button";
 import { useState } from "react";
 
 const Form = (props) => {
-
-    const crews = [
-        '',
-        'Programação',
-        'Front-end',
-        'Data Science',
-        'DevOps',
-        'UX e Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
-
     const [name, setName] = useState('');
     const [charge, setCharge] = useState('');
     const [image, setImage] = useState('');
@@ -58,7 +46,7 @@ const Form = (props) => {
                 />
                 <Select 
                     label="Time" 
-                    itens={crews} 
+                    itens={props.crews} 
                     required={true} 
                     value={crew}
                     onChange={value => setCrew(value)}
