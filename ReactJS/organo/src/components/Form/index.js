@@ -18,6 +18,10 @@ const Form = (props) => {
             image, 
             crew 
         });
+        setName('');
+        setCharge('');
+        setImage('');
+        setCrew('');
     }
 
     return (
