@@ -10,10 +10,13 @@
     padding: 36px 64px;
     box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
+    font-family: 'Montserrat';
+    font-weight: 600;
 }
 
 .section__form-title {
     font-weight: 400;
     font-size: 32px;
     line-height: 43px;
+    font-family: 'Prata', serif;
 }
