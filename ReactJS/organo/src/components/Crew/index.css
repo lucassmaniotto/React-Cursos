@@ -13,3 +13,10 @@
     padding-bottom: 16px;
     display: inline-block;
 }
+
+.crew__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 32px;
+}

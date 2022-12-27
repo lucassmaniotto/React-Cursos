@@ -62,6 +62,7 @@ function App() {
           name={crew.name}
           primaryColor={crew.primaryColor}
           secondaryColor={crew.secondaryColor}
+          users={users.filter(user => user.crew === crew.name)}
         />
       ))}
 
