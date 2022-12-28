@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Banner from "./components/Banner";
 import Form from "./components/Form";
+import SectionTitle from "./components/SectionTitle";
 import Crew from "./components/Crew";
 import Footer from "./components/Footer";
 
@@ -56,7 +57,13 @@ function App() {
     <div className="App">
       <Banner />
       <Form crews={crewNames} forRegisteredUser={user => forNewAddedUser(user)}/>
-
+      {crews.map(crew => (
+        <SectionTitle 
+          key={crew.name}
+          title="Minhas Organizações: "
+          users = {users.filter(user => user.crew === crew.name)}
+        />
+      ))}
       {crews.map (crew => (
         <Crew 
           key={crew.name} 
