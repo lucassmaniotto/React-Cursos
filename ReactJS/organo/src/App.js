@@ -56,7 +56,11 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Form crews={crewNames} forRegisteredUser={user => forNewAddedUser(user)}/>
+      <Form 
+        crews={crewNames} 
+        users={users}
+        forRegisteredUser={user => forNewAddedUser(user)}
+      />
       {crews.map(crew => (
         <SectionTitle 
           key={crew.name}

@@ -1,8 +1,11 @@
 .footer__wrapper {
+    position: absolute;
+    bottom: auto;
+    width: 100%;
+    display: flex;
     background-color: #6278F7;
     background-image: url(../../../public/img/fundo.png);
     padding: 64px 0;
-    display: flex;
     justify-content: space-around;
     align-items: center;
 }

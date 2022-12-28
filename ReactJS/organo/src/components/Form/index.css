@@ -21,6 +21,10 @@
     font-weight: 600;
 }
 
+.hide {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
     .section__form{
         margin: 40px 0;

@@ -1,8 +1,8 @@
 import "./index.css";
 
-const HideFormButton = (props, { onClick }) => {
+const HideFormButton = ({ onClick }) => {
     return (
-        (props.users.length > 0) ? <button className="hide-form-button" onClick={onClick}></button> : ''
+        <button className="hide-form-button" onClick={onClick}></button>
     );
 };
 

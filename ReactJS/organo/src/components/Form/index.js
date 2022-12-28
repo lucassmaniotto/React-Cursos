@@ -2,6 +2,7 @@ import "./index.css";
 import Input from "../Input";
 import Select from "../Select";
 import Button from "../Button";
+import HideFormButton from "../HideFormButton";
 import { useState } from "react";
 
 const Form = (props) => {
@@ -24,9 +25,18 @@ const Form = (props) => {
         setCrew('');
     }
 
+    const onHideForm = () => {
+        const form = document.querySelector('.section__form-content');
+        if (form.classList.contains('hide')) {
+            form.classList.remove('hide');
+        } else {
+            form.classList.add('hide');
+        }
+    }
+
     return (
         <section className="section__form">
-            <form className="section__form-content" onSubmit={onSave}>
+            <form className="section__form-content " onSubmit={onSave}>
                 <h2 className="section__form-title">Preencha os dados para criar o card do colaborador.</h2>
                 <Input
                     label="Nome"
@@ -57,6 +67,7 @@ const Form = (props) => {
                 />
                 <Button>Criar card</Button>
             </form>
+            {props.users.length > 0 && <HideFormButton onClick={onHideForm} />}
         </section>
     )
 }
