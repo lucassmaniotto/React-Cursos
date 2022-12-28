@@ -30,6 +30,9 @@
     .footer__wrapper {
         flex-direction: column-reverse;
         padding: 32px 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     .footer__social-media {
