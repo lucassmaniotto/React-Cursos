@@ -54,7 +54,7 @@ const Form = (props) => {
                 />
                 <Input 
                     label="Imagem" 
-                    placeholder="Informe o endereço da imagem" 
+                    placeholder="https://..." 
                     value={image}
                     onChange={value => setImage(value)}
                 />
