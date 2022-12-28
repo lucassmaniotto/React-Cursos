@@ -1,8 +1,8 @@
 import './index.css';
 
-const Card = ({name, image, charge}) => {
+const Card = ({name, image, charge, color}) => {
   return (<div className="card__wrapper">
-    <div className="card__header" style={{ backgroundColor: "#f5f5f5"}}>
+    <div className="card__header" style={{ backgroundColor: color}}>
         <img src={image} alt={name} className='card__img'/>
     </div>
     <div className='card__footer'>
