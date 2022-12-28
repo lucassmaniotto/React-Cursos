@@ -7,7 +7,7 @@ const Card = ({name, image, charge}) => {
     </div>
     <div className='card__footer'>
         <h4 className='card__name'>{name}</h4>
-        <h5 className='card_charge'>{charge}</h5>
+        <h3 className='card__charge'>{charge}</h3>
     </div>
   </div>
   )

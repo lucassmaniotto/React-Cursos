@@ -13,8 +13,25 @@
     font-size: 16px;
     padding: 24px;
     box-sizing: border-box;
+    color: #7c7c7c;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.select__select > option {
+    color: #7c7c7c;
 }
 
 .select__select:focus {
     outline: none;
+}
+
+@media screen and (max-width: 768px) {
+    .select__label {
+        font-size: 14px;
+    }
+
+    .select__select {
+        padding: 16px;
+        font-size: 12px;
+    }
 }

@@ -25,3 +25,18 @@
 .input__data:focus {
     outline: none;
 }
+
+@media screen and (max-width: 768px) {
+    .input__content {
+        margin: 16px 0;
+    }
+
+    .input__label {
+        font-size: 14px;
+    }
+
+    .input__data {
+        padding: 16px;
+        font-size: 12px;
+    }
+}

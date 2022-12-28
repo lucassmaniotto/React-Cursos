@@ -17,7 +17,7 @@
     background: #FFFFFF;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
     border-radius: 0px 0px 10px 10px;
-    padding-top: 90px;
+    padding-top: 60px;
     padding-bottom: 40px;
 }
 
@@ -30,8 +30,21 @@
 }
 
 .card__charge {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 22px;
     color: #212121;
     padding: 0 16px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .card__name {
+        font-size: 20px;
+        line-height: 17px;
+    }
+
+    .card__charge {
+        font-size: 18px;
+        line-height: 17px;
+    }
 }
