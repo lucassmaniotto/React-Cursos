@@ -1,5 +1,8 @@
+import './styles/globalStyles.scss'
+import HomePage from "./pages/HomePage";
+
 export default function App() {
   return (
-    <h1>Alura Space</h1>
+    <HomePage />
   );
 }
