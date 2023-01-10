@@ -16,9 +16,13 @@
   &__icons {
     width: 10%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     cursor: pointer;
+  }
+
+  &__icon {
+    margin: 0 10px;
   }
 
   p {
