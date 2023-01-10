@@ -1,9 +1,9 @@
 import React from 'react'
-import home from '../../assets/icons/home-active.png'
-import mostLiked from '../../assets/icons/most-liked-inactive.png'
-import mostViewed from '../../assets/icons/most-viewed-inactive.png'
-import newImages from '../../assets/icons/new-inactive.png'
-import surpriseMe from '../../assets/icons/surprise-me-inactive.png'
+import home from 'assets/icons/home-active.png'
+import mostLiked from 'assets/icons/most-liked-inactive.png'
+import mostViewed from 'assets/icons/most-viewed-inactive.png'
+import newImages from 'assets/icons/new-inactive.png'
+import surpriseMe from 'assets/icons/surprise-me-inactive.png'
 import styles from './Menu.module.scss'
 
 export default function Menu() {
