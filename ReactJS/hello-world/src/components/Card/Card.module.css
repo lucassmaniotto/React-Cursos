@@ -1,0 +1,56 @@
+.card {
+    text-align: center;
+    width: 282px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 0px 0px 10px 10px;
+    padding-bottom: 1.5rem;
+    transition: transform .2s;
+}
+
+.card:hover {
+    transform: translate(0, -1rem);
+}
+
+.cover {
+    width: 100%;
+}
+
+.title {
+    font-family: var(--secondary-font);
+    font-size: 1.25rem;
+    color: var(--dark-blue);
+    line-height: 1.75rem;
+    margin: 1.5rem 0 1.75rem;
+}
+
+.buttonSee {
+    display: inline-block;
+    border-radius: 24px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+    background-color: var(--blue);
+    color: var(--white);
+    border: 3px solid var(--blue);
+    cursor: pointer;
+    transition: 0.2s
+}
+
+.buttonSee:hover {
+    background-color: var(--dark-blue);
+    border: 3px solid var(--dark-blue);
+    transition: 0.5s
+}
+
+@media (max-width: 1100px) {
+    .card {
+        width: 336px;
+    }
+    .title {
+        font-weight: 600;
+    }
+    .buttonSee {
+        padding: 0.6875rem 1.5rem;
+        font-size: 1.375rem;
+    }
+}
