@@ -4,6 +4,8 @@ import Footer from 'components/Footer';
 import AboutMe from "./pages/AboutMe";
 import Home from "./pages/Home";
 import DefaultPage from 'components/DefaultPage';
+import Projects from 'pages/Projects';
+import NotFound from 'pages/NotFound';
 
 function AppRoutes() {
   return (
@@ -12,9 +14,10 @@ function AppRoutes() {
       <Routes>
         <Route path="/" element={<DefaultPage />}>
           <Route index element={<Home />} />
-          <Route path="/about" element={<AboutMe />} />
+          <Route path="about" element={<AboutMe />} />
+          <Route path="projects/:id" element={<Projects />} />
         </Route>
-        <Route path='*' element={<h1>404 - Not Found</h1>} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />
     </BrowserRouter>
