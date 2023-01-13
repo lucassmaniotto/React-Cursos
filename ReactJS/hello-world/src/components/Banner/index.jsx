@@ -6,7 +6,7 @@ export default function Banner() {
     <div className={styles.banner}>
       <div className={styles.intro}>
         <h1 className={styles.title}>Olá Mundo!</h1>
-        <p className={styles.paragraph}>Boas vindas ao meu espaço pessoal! Meu nome é Lucas Smaniotto, sou estudante de Ciência da Computação em formação, e é aqui que você poderá conhecer a mim e meus projetos. Espero que goste :)</p>
+        <p className={styles.paragraph}>Boas vindas ao meu espaço pessoal! Meu nome é Lucas Smaniotto, sou estudante de Ciência da Computação em formação, e é aqui que você pode conhecer a mim e meus projetos. Espero que goste :)</p>
       </div>
       <div className={styles.images}>
         <img 
