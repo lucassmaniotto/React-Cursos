@@ -96,6 +96,7 @@
         height: 94vw;
         bottom: calc(-94vw * 0.3);
         max-height: 375px;
+        max-width: fit-content;
     }
 
     .blankSpace {
