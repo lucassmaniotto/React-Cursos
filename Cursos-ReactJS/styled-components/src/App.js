@@ -1,12 +1,14 @@
 import React from "react";
 
-import Cabecalho from "./Components/Cabecalho";
+import Nav from "./Components/Nav";
 import Container from "./Components/Container";
+import { GlobalStyle } from "./Components/GlobalStyle";
 
 function App() {
   return (
     <>
-      <Cabecalho />
+      <GlobalStyle />
+      <Nav />
       <Container />
     </>
   );
