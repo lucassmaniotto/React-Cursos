@@ -6,15 +6,23 @@ export const Icon = styled.img`
     width: 25px;
 `
 
+export const IconTheme = styled(Icon)`
+    filter: ${({theme}) => theme.filter};
+`
+
 export const Box = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: white;
+    background-color: ${props => props.theme.inside};
     border-radius: 5px;
     box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.04);
     padding: 20px;
     width: 48%;
+
+    h2 {
+        margin-bottom: 10px;
+    }
 
     @media (max-width: 800px) {
         width: 95%;
@@ -43,4 +51,13 @@ export const Detail = styled.span`
 export const Balance = styled.div`
     font-weight: 700;
     font-size: 32px;
+`
+
+export const BtnTheme = styled.button`
+    position: absolute;
+    top: 4vh;
+    right: 20px;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
 `
