@@ -4,6 +4,7 @@ import { lightBackground } from "../UI/variables";
 
 import Title from "../Title";
 import Account from "../Account";
+import Statement from "../Statement";
 
 const Container = styled.div`
   background-color: ${lightBackground};
@@ -27,7 +28,7 @@ const ContainerWrapper = () => {
       <Title>Olá Fulano!</Title>
       <Content>
         <Account>Conta Corrente</Account>
-        <Account>Conta Poupança</Account>
+        <Statement />
       </Content>
     </Container>
   );
