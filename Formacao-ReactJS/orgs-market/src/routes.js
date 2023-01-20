@@ -1,33 +1,21 @@
 import Carrinho from 'pages/Carrinho';
 import Feira from 'pages/Feira';
 import Login from 'pages/Login';
-import { useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { UserProvider } from 'common/context/User';
 
 export default function Router() {
-
-    const [name, setName] = useState('');
-    const [balance, setBalance] = useState(0);
-
     return (
         <BrowserRouter>
             <Switch>
-                <Route exact path="/">
-                    <Login 
-                        name={name} 
-                        setName={setName}
-                        balance={balance}
-                        setBalance={setBalance}
-                    />
-                </Route>
-                <Route path="/feira">
-                    <Feira 
-                        name={name} 
-                        setName={setName}
-                        balance={balance}
-                        setBalance={setBalance}
-                    />
-                </Route>
+                <UserProvider>
+                    <Route exact path="/">
+                        <Login />
+                    </Route>
+                    <Route path="/feira">
+                        <Feira />
+                    </Route>
+                </UserProvider>
                 <Route path="/carrinho">
                     <Carrinho />
                 </Route>

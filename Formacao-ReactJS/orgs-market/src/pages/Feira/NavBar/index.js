@@ -11,6 +11,7 @@ export default function NavBar() {
       <IconButton>
         <Badge
           color="primary"
+          overlap="rectangular"
         >
           <ShoppingCartIcon />
         </Badge>
