@@ -3,6 +3,7 @@ import Feira from 'pages/Feira';
 import Login from 'pages/Login';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { UserProvider } from 'common/context/User';
+import { CartProvider } from 'common/context/Cart';
 
 export default function Router() {
     return (
@@ -12,9 +13,11 @@ export default function Router() {
                     <Route exact path="/">
                         <Login />
                     </Route>
-                    <Route path="/feira">
-                        <Feira />
-                    </Route>
+                    <CartProvider>
+                        <Route path="/feira">
+                            <Feira />
+                        </Route>
+                    </CartProvider>
                 </UserProvider>
                 <Route path="/carrinho">
                     <Carrinho />

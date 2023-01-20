@@ -3,7 +3,7 @@ import { memo } from 'react';
 import { IconButton } from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
-
+import { useCartContext } from 'common/context/Cart';
 
 function Produto({
   nome,
@@ -12,6 +12,8 @@ function Produto({
   valor,
   unidade
 }) {
+  const { cart, addProduct } = useCartContext();
+  const productInCart = cart.find(product => product.id === id);
   return (
       <Container>
         <div>
@@ -29,12 +31,12 @@ function Produto({
           >
             <RemoveIcon />
           </IconButton>
-          <IconButton>
+          {productInCart?.quantidade || 0}
+          <IconButton onClick={() => addProduct({nome, foto, id, valor})}>
             <AddIcon />
           </IconButton>
         </div>
       </Container>
   )
 }
-
-export default memo(Produto)
+export default memo(Produto);
