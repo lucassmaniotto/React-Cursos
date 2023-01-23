@@ -19,6 +19,11 @@ export const Container = styled.main`
     color: ${titleGray};
     font-size: 32px;
   }
+  h3 {
+    color: ${titleGray};
+    font-size: 24px;
+    margin: 20px 0;
+  }
 `;
 
 export const Voltar = styled(IconButton).attrs({
@@ -33,7 +38,8 @@ export const TotalContainer = styled.section`
   margin-top: 20px;
   > div {
     align-items: center;
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     gap: 20px;
     justify-content: space-between;
     h2 {

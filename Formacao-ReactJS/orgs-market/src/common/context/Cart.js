@@ -1,5 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { createContext, useState } from "react";
+import { UsePaymentContext } from "./Payment";
+import { UserContext } from "./User";
 
 export const CartContext = createContext();
 CartContext.displayName = "Cart";
@@ -8,6 +10,7 @@ export const CartProvider = ({children}) => {
 
     const [cart, setCart] = useState([]);
     const [productQuantities, setProductQuantities] = useState(0);
+    const [totalValue, setTotalValue] = useState(0);
 
     return (
         <CartContext.Provider 
@@ -15,7 +18,9 @@ export const CartProvider = ({children}) => {
             cart, 
             setCart,
             productQuantities,
-            setProductQuantities
+            setProductQuantities,
+            totalValue,
+            setTotalValue
           }}>
             {children}
         </CartContext.Provider>
@@ -27,8 +32,18 @@ export const useCartContext = () => {
       cart, 
       setCart, 
       productQuantities, 
-      setProductQuantities 
+      setProductQuantities,
+      totalValue,
+      setTotalValue
     } = useContext(CartContext);
+
+    const {
+      paymentType
+    } = UsePaymentContext();
+
+    const {
+      setBalance
+    } = useContext(UserContext);
 
     function changeQuantity(id, quantity) {
       return cart.map(product => {
@@ -57,10 +72,24 @@ export const useCartContext = () => {
       setCart(changeQuantity(id, -1));
     }
 
+    function makePurchase() {
+      setCart([]);
+      setBalance(balance => balance - totalValue);
+    }
+
     useEffect(() => {
-      const newQuantity = cart.reduce((count, product) => count + product.quantidade, 0);
+      const { newTotal, newQuantity } = cart.reduce((count, product) => (
+        {
+          newQuantity: count.newQuantity + product.quantidade,
+          newTotal: count.newTotal + (product.valor * product.quantidade)
+        }), { 
+          newTotal: 0, 
+          newQuantity: 0
+        }
+      );
       setProductQuantities(newQuantity);
-    }, [cart, setProductQuantities]);
+      setTotalValue(newTotal * paymentType.interests);
+    }, [cart, setProductQuantities, setTotalValue, paymentType]);
     
     return { 
         cart,
@@ -68,6 +97,8 @@ export const useCartContext = () => {
         addProduct,
         removeProduct,
         productQuantities,
-        setProductQuantities
+        setProductQuantities,
+        totalValue,
+        makePurchase
     };
 }
