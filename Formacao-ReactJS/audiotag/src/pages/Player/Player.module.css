@@ -1,0 +1,22 @@
+.video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-bottom: 15em;
+    height: 80vh;
+}
+
+@media screen and (max-width: 1148px) {
+    .video {
+        height: 38vh;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .video {
+        height: 30vh;
+    }
+}

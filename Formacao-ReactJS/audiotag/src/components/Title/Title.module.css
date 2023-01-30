@@ -1,0 +1,16 @@
+.title h1 {
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--white);
+    text-shadow: 0px 3px 3px var(--green);
+    margin: 2em 0;
+}
+
+
+@media screen and (max-width: 430px) {
+    .title h1 {
+        font-size: 24px;
+        padding: 0 1em;
+    }
+}

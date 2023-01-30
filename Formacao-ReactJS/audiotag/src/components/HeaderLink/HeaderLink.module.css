@@ -1,0 +1,18 @@
+.link {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: 300;
+    padding: 0 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.link:hover {
+    color: var(--green);
+}
+
+@media screen and (max-width: 1148px) {
+    .link {
+        padding: 0 0.5rem;
+    }
+}
