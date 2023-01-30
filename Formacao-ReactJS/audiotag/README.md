@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# AudioTag
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+AudioTag é uma plataforma de compartilhamento de bandas e de seus clipes desenvolvido durante o curso de prática de React.js da Alura que consome dados externo de um mock de API, e utiliza ContextAPI e React Router Dom
 
-## Available Scripts
+| :placard: Vitrine.Dev |     |
+| -------------  | --- |
+| :sparkles: Nome        | **AudioTag**
+| :label: Tecnologias | javascript, html, css, module css, npm, react, jsx
+| :rocket: URL         | https://audio-tag.vercel.app/
+| 🖥 Curso    | https://cursos.alura.com.br/course/react-praticando-react-js
 
-In the project directory, you can run:
+![logo](https://user-images.githubusercontent.com/101435037/215464885-f5d1fc83-25a0-46a1-8fa6-b274338740fa.png#vitrinedev)
 
-### `npm start`
+## Detalhes do projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Este projeto é uma Single Page Application (SPA) desenvolvido em ReactJS utilizando React Router e ContextAPI para compartilhamento de dados entre as páginas da aplicação.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### ⚙️ Configurando o projeto
+Para que o projeto funcione corretamente, é necessário instalar as dependências do projeto. Para isso, basta executar o comando abaixo no terminal:
 
-### `npm test`
+```bash
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### ▶️ Executando o projeto
+No diretório do projeto, você pode executar:
+```bash
+npm start
+```
+Com o comando acima, você irá rodar o projeto em modo de desenvolvimento que pode ser acessado em [http://localhost:3000](http://localhost:3000) no seu navegador.
 
-### `npm run build`
+### 📚 Bibliotecas
+* [react-router-dom](https://reactrouter.com/en/main)
+* [react icons](https://react-icons.github.io/react-icons/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 💡 Funcionalidades
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Rotas
+Visto que o projeto é uma SPA, o mesmo funciona como uma página só, através de rotas gerenciadas pelo React Router:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![image](https://user-images.githubusercontent.com/101435037/215462254-cdd6fe8f-1eb2-4da9-9df5-1128b2e4f1b4.png)
 
-### `npm run eject`
+As rotas consistem em duas abas, uma de Home Page que possui cards de bandas, que são consumidas através de uma [API](https://my-json-server.typicode.com/lucassmaniotto/api-audiotag/videos) usada com Mock pelo do [My-JSON-Server](https://my-json-server.typicode.com/lucassmaniotto/api-audiotag/videos), onde seu repositório pode ser acessado [clicando aqui](https://github.com/lucassmaniotto/api-audiotag).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![image](https://user-images.githubusercontent.com/101435037/215462104-47f030b0-c144-4b14-8dbf-a191a4f72a67.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Renderização de bandas
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Para cada página de artigo, o conteúdo é renderizado em uma rota dinâmica *videos/:id* com o conteúdo de json consumido pela Fake API do My-JSON-Server, possibilitando uma variedade de bandas:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![image](https://user-images.githubusercontent.com/101435037/215463422-4993cd52-2e8b-4657-9471-72b1ee3fbd9b.png)
 
-## Learn More
+### Favoritando bandas
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Cada card possui um botão de favorito, onde é compartilhado o contexto entre as páginas de Início e Favoritos. Além disso, ao apertar na imagem da banda é possível acessar seus video clipes provindos da Fake API:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![image](https://user-images.githubusercontent.com/101435037/215467835-b112746f-14c0-4782-93ec-d1d50a41ed7b.png)
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/101435037/215462995-663de24d-b1b1-4318-a72d-238bf11c16ff.gif)
