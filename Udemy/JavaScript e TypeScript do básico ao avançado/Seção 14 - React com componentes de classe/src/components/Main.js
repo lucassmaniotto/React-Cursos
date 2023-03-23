@@ -11,6 +11,20 @@ export default class Main extends Component {
     index: -1,
   };
 
+  componentDidMount() {
+    const tasks = JSON.parse(localStorage.getItem('tasks'));
+    if (!tasks) return;
+
+    this.setState({ tasks });
+  }
+
+  componentDidUpdate(prevState) {
+    const { tasks } = this.state;
+    if (tasks === prevState.tasks) return;
+
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }
+
   handleSubmit = (event) => {
     event.preventDefault();
     const { tasks, index } = this.state;
