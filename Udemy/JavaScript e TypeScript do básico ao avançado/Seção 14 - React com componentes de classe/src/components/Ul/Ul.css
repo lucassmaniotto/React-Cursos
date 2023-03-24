@@ -1,0 +1,57 @@
+.tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2em auto;
+  padding: 0;
+  width: 75%;
+}
+
+.tasks li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  margin: 0.5em 0;
+  padding: 0.5em;
+  background-color: #2C3333;
+  border-radius: 0.25em;
+  box-shadow: 0.2em 0.2em 0.2em #000000;
+}
+
+.tasks li > span {
+  font-size: 1.2em;
+  color: white;
+}
+
+.tasks li > input {
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0 0.5em;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  border: 1px solid white;
+  border-radius: 0.25em;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.tasks li > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;;
+}
+
+.tasks li > div > button{
+  width: 2.2em;
+  height: 2.2em;
+  margin: 0 0.2em;
+}

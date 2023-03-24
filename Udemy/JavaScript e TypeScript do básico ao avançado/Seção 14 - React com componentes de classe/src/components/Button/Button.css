@@ -1,0 +1,25 @@
+button {
+  border-radius: 2em;
+  border: 1px solid #0b686b;
+  padding: 0.6em;
+  background-color: #0E8388;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #2E4F4F;
+  border: 1px solid #2E4F4F;
+  box-shadow: 0.15em 0.15em 0 #000000;
+  transition: 0.2s ease-in-out;
+}
+
+button:active {
+  box-shadow: none;
+  position: relative;
+  top: 0.1em;
+  left: 0.1em;
+}

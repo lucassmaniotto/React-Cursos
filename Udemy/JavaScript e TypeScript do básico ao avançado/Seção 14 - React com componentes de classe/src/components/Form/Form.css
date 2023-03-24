@@ -1,0 +1,16 @@
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5em auto;
+}
+
+@media screen and (max-width: 400px) {
+  form {
+    margin: 0;
+  }
+
+  form > input[type="text"] {
+    width: 70%;
+  }
+}

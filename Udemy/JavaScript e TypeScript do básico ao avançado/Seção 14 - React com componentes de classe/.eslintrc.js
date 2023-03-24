@@ -32,5 +32,7 @@ module.exports = {
     'react/state-in-constructor': 'off',
     'import/no-extraneous-dependencies': 'off',
     'jsx-quotes': ['error', 'prefer-single'],
+    'react/button-has-type': 'off',
+    'react/forbid-prop-types': 'off',
   },
 };

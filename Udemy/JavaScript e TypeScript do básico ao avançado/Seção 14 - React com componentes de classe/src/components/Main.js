@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-
-import { FaPlus, FaMinus, FaEdit } from 'react-icons/fa';
+import Form from './Form';
+import Ul from './Ul';
 
 import './Main.css';
 
@@ -78,44 +78,17 @@ export default class Main extends Component {
       <main>
         <div className='container'>
           <h1>Lista de Tarefas</h1>
-
-          <form
-            onSubmit={this.handleSubmit}
-            action='#'
-          >
-            <input
-              onChange={this.handleInputChange}
-              type='text'
-              value={newTask}
-            />
-            <button type='submit'>
-              <FaPlus className='icon' />
-            </button>
-          </form>
-          <ul className='tasks'>
-            {tasks.map((task, index) => (
-              <li key={task}>
-                <input type='checkbox' />
-                <span>{task}</span>
-                <div>
-                  <button
-                    onClick={(e) => this.handleEdit(e, index)}
-                    type='button'
-                  >
-                    <FaEdit className='icon' />
-                  </button>
-                  <button
-                    onClick={(e) => this.handleDelete(e, index)}
-                    type='button'
-                  >
-                    <FaMinus className='icon' />
-                  </button>
-                </div>
-              </li>
-            ))}
-          </ul>
+          <Form
+            handleSubmit={this.handleSubmit}
+            handleInputChange={this.handleInputChange}
+            newTask={newTask}
+          />
+          <Ul
+            tasks={tasks}
+            handleDelete={this.handleDelete}
+            handleEdit={this.handleEdit}
+          />
         </div>
-
       </main>
     );
   }
