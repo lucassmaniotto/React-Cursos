@@ -18,6 +18,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 body {
@@ -46,6 +47,7 @@ nav > ul {
 
 nav a {
   color: inherit;
+  margin: 0 1rem;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
@@ -53,11 +55,4 @@ nav a {
 nav a:hover {
   color: #79b8ff;
   text-shadow: 0 0 10px #79b8ff;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
 }

@@ -10,6 +10,12 @@ export const Nav = () => {
         <li>
           <Link to="/about">About</Link>
         </li>
+        <li>
+          <Link to="/post">Posts</Link>
+        </li>
+        <li>
+          <Link to="/post/1">Post 1</Link>
+        </li>
       </ul>
     </nav>
   );
