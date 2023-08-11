@@ -32,6 +32,29 @@ h1 {
   line-height: 1.1;
 }
 
+ul {
+  list-style: none;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 0;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: #79b8ff;
+  text-shadow: 0 0 10px #79b8ff;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
