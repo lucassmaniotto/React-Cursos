@@ -56,3 +56,23 @@ nav a:hover {
   color: #79b8ff;
   text-shadow: 0 0 10px #79b8ff;
 }
+
+button {
+  border: 1px solid rgba(255, 255, 255, 0.87);
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.87);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  border: 1px solid #79b8ff;
+  color: #79b8ff;
+  text-shadow: 0 0 10px #79b8ff;
+  box-shadow: 0 0 10px #79b8ff;
+}
