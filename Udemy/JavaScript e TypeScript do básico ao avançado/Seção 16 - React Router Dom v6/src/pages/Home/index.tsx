@@ -4,7 +4,9 @@ export const Home = () => {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate("/about");
+    navigate("/about", {
+        state: `Hello from Home - ${new Date().toLocaleString()}`,
+    });
   };
   return (
     <div>
