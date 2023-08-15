@@ -1,0 +1,25 @@
+.button {
+  width: 10%;
+  background: linear-gradient(to right, #333, #555);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 15px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(to right, #555, #777);
+  }
+
+  &:disabled {
+    background: #888;
+    cursor: not-allowed;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .button {
+    width: 100%;
+  }
+}

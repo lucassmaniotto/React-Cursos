@@ -1,0 +1,50 @@
+.text-input {
+  width: 30%;
+  font-size: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+
+  &:focus {
+    border-color: #333;
+  }
+
+  &::placeholder {
+    color: #ccc;
+  }
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.text-input::-webkit-search-cancel-button {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url('https://img.icons8.com/material-outlined/16/000000/cancel.png');
+  background-size: cover;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.text-input::-webkit-search-cancel-button:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1100px) {
+  .text-input {
+    width: 100%;
+    margin: 0 0 10px;
+
+    &:not(:last-child) {
+      margin-right: 0px;
+    }
+  }
+}
