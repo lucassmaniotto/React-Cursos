@@ -51,14 +51,14 @@ export const Home = () => {
     <section className="container">
       <div className="search-container">
         <TextInput searchValue={searchValue} handleChange={handleChange} />
-        {!searchValue && !loading && <Button text="Carregar posts" onClick={loadMorePosts} disabled={noMorePosts} />}
+        {!searchValue && !loading && <Button text="Load Posts" onClick={loadMorePosts} disabled={noMorePosts} />}
       </div>
       {loading && (
         <div className="loading-spinner">
           <div className="spinner"></div>
         </div>
       )}{' '}
-      {!loading && filteredPosts.length === 0 && <h1 className="spinner-title">Nenhum post encontrado :(</h1>}
+      {!loading && filteredPosts.length === 0 && <h1 className="spinner-title">Sorry, no posts found :(</h1>}
       {filteredPosts.length > 0 && <Posts posts={filteredPosts} />}
     </section>
   );
