@@ -13,6 +13,10 @@ export const TextInput = ({ searchValue, handleChange }) => {
   );
 };
 
+TextInput.defaultProps = {
+  searchValue: '',
+};
+
 TextInput.propTypes = {
   searchValue: P.string.isRequired,
   handleChange: P.func.isRequired,
