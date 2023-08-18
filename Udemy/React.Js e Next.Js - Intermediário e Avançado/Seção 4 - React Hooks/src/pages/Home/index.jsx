@@ -14,6 +14,10 @@ export const Home = () => {
       <a href="https://reactjs.org/docs/hooks-intro.html" target="_blank" rel="noopener noreferrer">
         Documentação React Hooks
       </a>
+      <br />
+      <a href="https://pt-br.legacy.reactjs.org/docs/hooks-rules.html" target="_blank" rel="noopener noreferrer">
+        Regras dos Hooks
+      </a>
     </div>
   );
 };
