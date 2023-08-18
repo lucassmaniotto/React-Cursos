@@ -9,7 +9,9 @@ nav > ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
   padding: 1.5rem 0;
 }
 

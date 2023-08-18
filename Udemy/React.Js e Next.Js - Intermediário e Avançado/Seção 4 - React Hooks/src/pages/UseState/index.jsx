@@ -19,13 +19,13 @@ export const UseState = () => {
     <div>
       <h2>useState( );</h2>
       <img src={logo} className={`logo ${reverseClass}`} alt="logo" />
-      <h1>Counter: {counter}</h1>
+      <h1>Contador: {counter}</h1>
       <div className="buttons">
         <button type="button" onClick={handleClick}>
-          Reverse
+          Reverter
         </button>
         <button type="button" onClick={handleIncrement}>
-          Increment
+          Incrementar
         </button>
       </div>
     </div>
