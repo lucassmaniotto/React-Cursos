@@ -1,0 +1,27 @@
+nav {
+  width: 100%;
+  padding: 1rem 0;
+  margin: 0 0 2rem;
+  font-size: 1.2rem;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 0;
+}
+
+nav a {
+  display: flex;
+  color: inherit;
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: #79b8ff;
+  text-shadow: 0 0 10px #79b8ff;
+}
