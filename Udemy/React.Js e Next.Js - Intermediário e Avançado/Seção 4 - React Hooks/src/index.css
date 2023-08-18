@@ -47,6 +47,10 @@ h1 {
   margin: 1rem 0;
 }
 
+h2 {
+  margin: 1rem 0 2.5rem;
+}
+
 p {
   font-size: 1.1em;
   line-height: 1.5;

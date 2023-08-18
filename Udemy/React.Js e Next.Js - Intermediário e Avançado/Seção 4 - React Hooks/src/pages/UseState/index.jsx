@@ -17,7 +17,7 @@ export const UseState = () => {
 
   return (
     <div>
-      <p>useState( );</p>
+      <h2>useState( );</h2>
       <img src={logo} className={`logo ${reverseClass}`} alt="logo" />
       <h1>Counter: {counter}</h1>
       <div className="buttons">

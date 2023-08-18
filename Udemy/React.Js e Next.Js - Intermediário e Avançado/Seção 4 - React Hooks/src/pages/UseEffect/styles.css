@@ -1,0 +1,41 @@
+.icon {
+  margin: 0.25rem 0.1rem;
+  cursor: pointer;
+}
+
+.code-display {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid #242424;
+  border-radius: 0.25rem;
+  background-color: #2c2b2b;
+  font-family: monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+.code-block {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #242424;
+  border-radius: 0.25rem;
+  background-color: #0f0f0f;
+  font-family: monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+.description {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  font-family: monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+.button {
+  padding: 0rem 0.25rem;
+}
