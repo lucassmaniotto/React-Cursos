@@ -1,0 +1,73 @@
+.posts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  flex-wrap: wrap;
+}
+
+.post {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem;
+  width: 400px;
+  height: 400px;
+  overflow: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.post h3 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+}
+
+.post p {
+  margin: 0;
+}
+
+.loading-spinner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ccc;
+  border-top-color: #333;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+  transition: all 0.5s ease-in-out;
+}
+
+.spinner:hover {
+  border: 5px solid #79b8ff;
+  border-top-color: #333;
+  box-shadow: 0 0 10px #79b8ff;
+  cursor: wait;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+input {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: start;
+}

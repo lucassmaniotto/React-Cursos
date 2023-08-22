@@ -8,6 +8,7 @@ import { NotFound } from './pages/NotFound';
 import { UseState } from './pages/UseState';
 import { UseEffect } from './pages/UseEffect';
 import { UseCallback } from './pages/UseCallback';
+import { UseMemo } from './pages/UseMemo';
 
 export function AppRoutes() {
   return (
@@ -18,6 +19,7 @@ export function AppRoutes() {
           <Route path="useState" element={<UseState />} />
           <Route path="useEffect" element={<UseEffect />} />
           <Route path="useCallback" element={<UseCallback />} />
+          <Route path="useMemo" element={<UseMemo />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
