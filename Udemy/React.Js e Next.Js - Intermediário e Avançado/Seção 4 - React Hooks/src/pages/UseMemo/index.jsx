@@ -38,6 +38,10 @@ export const UseMemo = () => {
     <div>
       <h2>useMemo( );</h2>
       <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} />
+      <p className="description" style={{ width: '80%', margin: '0 auto' }}>
+        Com useMemo, ao alterar o estado do componente da Página no Input acima, os Posts não são renderizados
+        novamente, pois o useMemo só renderiza novamente o componente quando o estado do posts é alterado.
+      </p>
       <div className="posts">
         {useMemo(() => {
           return (
