@@ -1,0 +1,11 @@
+.content {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.content h2 {
+  margin: 30px 0 10px 0;
+  padding: 0;
+}

@@ -11,6 +11,7 @@ import { UseCallback } from './pages/UseCallback';
 import { UseMemo } from './pages/UseMemo';
 import { UseRef } from './pages/UseRef';
 import { UseContext } from './pages/UseContext';
+import { UseReducer } from './pages/UseReducer';
 
 export function AppRoutes() {
   return (
@@ -24,6 +25,7 @@ export function AppRoutes() {
           <Route path="useMemo" element={<UseMemo />} />
           <Route path="useRef" element={<UseRef />} />
           <Route path="useContext" element={<UseContext />} />
+          <Route path="useReducer" element={<UseReducer />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

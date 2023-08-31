@@ -21,7 +21,7 @@ export const UseContext = () => {
     <GlobalContext.Provider value={globalState}>
       <div>
         <h2>useEffect( );</h2>
-        <p className="description">
+        <p className="description" style={{ width: '70%', margin: '0 auto' }}>
           Ao clicar no botão do RightContent, o valor do contador é incrementado, e o componente LeftContent é
           atualizado. Os componentes estão dentro do componente GlobalContext.Provider, que é o componente que possui o
           estado global. <br /> <br />
