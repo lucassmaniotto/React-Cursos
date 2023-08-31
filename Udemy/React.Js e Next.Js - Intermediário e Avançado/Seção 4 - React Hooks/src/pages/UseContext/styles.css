@@ -1,0 +1,15 @@
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content div {
+  margin: 0 10px;
+}
+
+.divider {
+  width: 1px;
+  height: 100px;
+  background: #FFF;
+}

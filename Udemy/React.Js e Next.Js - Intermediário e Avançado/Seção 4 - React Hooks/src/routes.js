@@ -10,6 +10,7 @@ import { UseEffect } from './pages/UseEffect';
 import { UseCallback } from './pages/UseCallback';
 import { UseMemo } from './pages/UseMemo';
 import { UseRef } from './pages/UseRef';
+import { UseContext } from './pages/UseContext';
 
 export function AppRoutes() {
   return (
@@ -22,6 +23,7 @@ export function AppRoutes() {
           <Route path="useCallback" element={<UseCallback />} />
           <Route path="useMemo" element={<UseMemo />} />
           <Route path="useRef" element={<UseRef />} />
+          <Route path="useContext" element={<UseContext />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
