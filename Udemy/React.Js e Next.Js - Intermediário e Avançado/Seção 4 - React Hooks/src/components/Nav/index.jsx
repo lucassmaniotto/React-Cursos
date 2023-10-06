@@ -32,21 +32,6 @@ export const Nav = () => {
         <li>
           <Link to="/useReducer">useReducer</Link>
         </li>
-        <li>
-          <Link to="/useFetch">useFetch</Link>
-        </li>
-        <li>
-          <Link to="/useAsync">useAsync</Link>
-        </li>
-        <li>
-          <Link to="/useLayoutEffect">useLayoutEffect</Link>
-        </li>
-        <li>
-          <Link to="/useImperativeHandle">useImperativeHandle</Link>
-        </li>
-        <li>
-          <Link to="/useDebugValue">useDebugValue</Link>
-        </li>
       </ul>
     </nav>
   );
