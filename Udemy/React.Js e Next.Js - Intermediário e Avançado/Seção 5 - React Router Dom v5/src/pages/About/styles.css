@@ -1,0 +1,10 @@
+a {
+  color: #61dafb;
+}
+
+.description {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
