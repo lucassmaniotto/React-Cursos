@@ -11,11 +11,11 @@ const HeaderStyled = styled.header`
   }
 `;
 
-export const Header = () => {
+export const Header = ({ setFilter }) => {
   return (
     <HeaderStyled>
       <img src="/images/logo.png" alt="SpaceApp Logo" />
-      <Input />
+      <Input setFilter={setFilter} />
     </HeaderStyled>
   );
 };

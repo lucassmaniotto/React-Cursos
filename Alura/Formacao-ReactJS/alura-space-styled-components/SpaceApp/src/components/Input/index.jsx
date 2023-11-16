@@ -29,10 +29,10 @@ const SearchIcon = styled.img`
   height: 38px;
 `;
 
-export const Input = (props) => {
+export const Input = ({ setFilter }) => {
   return (
     <ContainerStyled>
-        <InputStyled placeholder="O que você procura?" {...props} />
+        <InputStyled onChange={(event) => { setFilter(event.target.value) }} type="text" placeholder="O que você procura?"/>
         <SearchIcon src={search} alt="Ícone de busca" />
     </ContainerStyled>
   )
