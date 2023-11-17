@@ -38,13 +38,22 @@ const BookItem = styled.li`
   align-items: center;
   margin-bottom: 20px;
   cursor: pointer;
+  
   p {
     width: 200px;
   }
+
   img {
     width: 200px;
   }
 
+  &:hover {
+    img {
+      opacity: 0.9;
+      transition: 0.4s ease-in-out all;
+      transform: scale(1.1);
+    }
+  }
 `;
 
 export { SearchContainer, Title, Subtitle, BookList, BookItem };
