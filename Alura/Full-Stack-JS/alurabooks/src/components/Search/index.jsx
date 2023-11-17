@@ -1,24 +1,26 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Input from "./Input";
-import { BookItem, BookList, SearchContainer, Subtitle, Title } from "./styles";
-import searchData from "./searchData.json";
+import { SearchContainer, Subtitle, Title } from "./styles";
+import { BookItem, BookList } from "../GlobalStyles/shared";
+
+import dataBooks from "./dataBooks.json";
 
 export const Search = () => {
   const [searchedBooks, setSearchedBooks] = useState([]);
+
   const handleSearch = (e) => {
     const value = e.target.value;
+    if (!value) {
+      setSearchedBooks([]);
+      return;
+    }
 
-    const searchResult = searchData.filter((book) =>
+    const searchResult = dataBooks.filter((book) =>
       book.title.toLowerCase().includes(value.toLowerCase())
     );
 
     setSearchedBooks(searchResult);
   };
-
-  useEffect(() => {
-    setSearchedBooks(searchData);
-  }, []);
-
 
   return (
     <SearchContainer>
@@ -28,7 +30,7 @@ export const Search = () => {
         onChange={(e) => handleSearch(e)}
         placeholder="Escreva sua próxima leitura"
       />
-      <BookList>
+      <BookList columns={5}>
         {searchedBooks.map((book) => (
           <BookItem key={book.id}>
             <p>{book.title}</p>

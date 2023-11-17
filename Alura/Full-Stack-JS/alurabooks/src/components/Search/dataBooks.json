@@ -18,5 +18,10 @@
     "title": "Aventureiros do Java",
     "id": 4,
     "src": "/images/livro.png"
+  },
+  {
+    "title": "Apache Kafka e Spring Boot",
+    "id": 5,
+    "src": "/images/livro.png"
   }
 ]
