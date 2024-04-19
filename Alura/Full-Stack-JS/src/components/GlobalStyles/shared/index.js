@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+const Container = styled.main`
+  width: 100%;
+`;
+
 const BookList = styled.ul`
   display: grid;
   grid-template-columns: ${(props) => `repeat(${props.columns}, 1fr)`};
@@ -33,4 +37,4 @@ const BookItem = styled.li`
   }
 `;
 
-export { BookList, BookItem };
+export { Container, BookList, BookItem };

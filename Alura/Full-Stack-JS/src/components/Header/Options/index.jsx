@@ -1,9 +1,15 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const OptionsList = styled.ul`
   display: flex;
 
-  li {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a > li {
     margin-right: 20px;
     min-width: 120px;
     font-size: 16px;
@@ -24,7 +30,9 @@ export const Options = () => {
   return (
     <OptionsList>
       {textOptions.map((text) => (
-        <li key={text}>{text}</li>
+        <Link to={`/${text.toLocaleLowerCase()}`} key={text}>
+          <li key={text}>{text}</li>
+        </Link>
       ))}
     </OptionsList>
   );

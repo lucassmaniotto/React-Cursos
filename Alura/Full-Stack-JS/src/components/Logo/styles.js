@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const LogoStyled = styled.div`
+export const LogoStyled = styled(Link)`
+  font-size: 1.5em;
   display: flex;
   align-items: center;
-  font-size: 1.5em;
+  text-decoration: none;
+  color: #333;
 `;
 
 export const LogoTitle = styled.h1`
