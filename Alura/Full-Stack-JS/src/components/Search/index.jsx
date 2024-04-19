@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Input from "./Input";
-import { SearchContainer, Subtitle, Title } from "./styles";
+import { SearchContainer, Section, Subtitle, Title } from "./styles";
 import { BookItem, BookList } from "../GlobalStyles/shared";
 
 import dataBooks from "./dataBooks.json";
@@ -30,14 +30,16 @@ export const Search = () => {
         onChange={(e) => handleSearch(e)}
         placeholder="Escreva sua próxima leitura"
       />
-      <BookList columns={5}>
-        {searchedBooks.map((book) => (
-          <BookItem key={book.id}>
-            <p>{book.title}</p>
-            <img src={book.src} alt={book.title} />
-          </BookItem>
-        ))}
-      </BookList>
+      <Section>
+        <BookList>
+          {searchedBooks.map((book) => (
+            <BookItem key={book.id}>
+              <p>{book.title}</p>
+              <img src={book.src} alt={book.title} />
+            </BookItem>
+          ))}
+        </BookList>
+      </Section>
     </SearchContainer>
   );
 };

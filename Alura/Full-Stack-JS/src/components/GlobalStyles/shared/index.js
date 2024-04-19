@@ -5,11 +5,14 @@ const Container = styled.main`
 `;
 
 const BookList = styled.ul`
-  display: grid;
-  grid-template-columns: ${(props) => `repeat(${props.columns}, 1fr)`};
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-items: center;
   align-items: center;
   width: 100%;
   padding: 0;
+  gap: 40px;
 `;
 
 const BookItem = styled.li`

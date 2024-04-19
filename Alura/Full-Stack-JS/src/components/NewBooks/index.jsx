@@ -30,7 +30,7 @@ export const NewBooks = () => {
   return (
     <Section>
       <Title>Últimos Lançamentos</Title>
-      <BookList columns={3}>
+      <BookList>
         {newBooks.map((book) => (
           <BookItem key={book.id}>
             <img src={book.src} alt={book.title} />

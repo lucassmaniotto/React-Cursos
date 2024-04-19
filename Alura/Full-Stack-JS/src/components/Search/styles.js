@@ -20,4 +20,9 @@ const Subtitle = styled.h3`
   margin-bottom: 40px;
 `;
 
-export { SearchContainer, Title, Subtitle };
+const Section = styled.section`
+  width: 90%;
+  margin: 50px auto 20px;
+`;
+
+export { SearchContainer, Title, Subtitle, Section };
