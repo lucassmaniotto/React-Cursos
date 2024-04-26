@@ -1,12 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Input from "./Input";
 import { SearchContainer, Section, Subtitle, Title } from "./styles";
 import { BookItem, BookList } from "../GlobalStyles/shared";
-
-import dataBooks from "./dataBooks.json";
+import { getBooks } from "../../services/books";
 
 export const Search = () => {
   const [searchedBooks, setSearchedBooks] = useState([]);
+  const [dataBooks, setDataBooks] = useState([]);
+
+  useEffect(() => {
+    fetchBooks();
+  }, []);
+
+  const fetchBooks = async () => {
+    const books = await getBooks();
+    setDataBooks(books);
+  };
 
   const handleSearch = (e) => {
     const value = e.target.value;
