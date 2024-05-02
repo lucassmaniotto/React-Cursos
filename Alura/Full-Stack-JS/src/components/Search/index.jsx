@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
-import Input from "./Input";
-import { SearchContainer, Section, Subtitle, Title } from "./styles";
-import { BookItem, BookList } from "../GlobalStyles/shared";
+import Swal from "sweetalert2";
+import { postFavoriteBook } from "../../services/favorites";
 import { getBooks } from "../../services/books";
+
+import Input from "./Input";
+
+import { BookItem, BookList, Section } from "../GlobalStyles/shared";
+import { SearchContainer, Subtitle, Title } from "./styles";
 
 export const Search = () => {
   const [searchedBooks, setSearchedBooks] = useState([]);
@@ -15,6 +19,21 @@ export const Search = () => {
   const fetchBooks = async () => {
     const books = await getBooks();
     setDataBooks(books);
+  };
+
+  const insertFavorite = async (id) => {
+    try {
+      await postFavoriteBook(id);
+      Swal.fire({
+        icon: "success",
+        title: "Livro adicionado aos favoritos",
+      });
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Erro ao adicionar livro aos favoritos",
+      });
+    }
   };
 
   const handleSearch = (e) => {
@@ -31,6 +50,10 @@ export const Search = () => {
     setSearchedBooks(searchResult);
   };
 
+  const handleBookClick = (id) => {
+    insertFavorite(id);
+  }
+
   return (
     <SearchContainer>
       <Title>Já sabe por onde começar?</Title>
@@ -42,7 +65,7 @@ export const Search = () => {
       <Section>
         <BookList>
           {searchedBooks.map((book) => (
-            <BookItem key={book.id}>
+            <BookItem key={book.id} onClick={() => handleBookClick(book.id)}>
               <p>{book.title}</p>
               <img src={book.src} alt={book.title} />
             </BookItem>

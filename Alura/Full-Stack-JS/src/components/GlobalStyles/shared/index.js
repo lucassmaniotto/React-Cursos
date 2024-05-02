@@ -40,4 +40,9 @@ const BookItem = styled.li`
   }
 `;
 
-export { Container, BookList, BookItem };
+const Section = styled.section`
+  width: 90%;
+  margin: 50px auto 20px;
+`;
+
+export { Container, BookList, BookItem, Section };
