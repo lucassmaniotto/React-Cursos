@@ -1,9 +1,10 @@
-import NextLink from "next/link";
+import NextLink from 'next/link';
+import { Text } from '../../theme/components';
 
-export default function Link({ href, children, ...props }) {
-  return (
-    <NextLink href={href} passHref>
-      <p {...props}>{children}</p>
-    </NextLink>
-  );
+export default function Link({ children, href, ...props}) {
+    return (
+        <NextLink href={href} passHref>
+            <Text as="a" {...props}>{children}</Text>
+        </NextLink>
+    );
 }
