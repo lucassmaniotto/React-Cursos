@@ -1,0 +1,32 @@
+{
+  "name": "alura-cases",
+  "version": "1.0.0",
+  "description": "Projeto de estudos feito pela Alura para estudos relacionados ao Next.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucassmaniotto/React-Cursos.git"
+  },
+  "keywords": [
+    "next.js",
+    "react",
+    "alura"
+  ],
+  "author": "Lucas Smaniotto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucassmaniotto/React-Cursos/issues"
+  },
+  "homepage": "https://github.com/lucassmaniotto/React-Cursos#readme",
+  "dependencies": {
+    "next": "^14.2.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
