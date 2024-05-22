@@ -5,7 +5,7 @@ import { authService } from "../src/services/auth/authService";
 export default function HomeScreen() {
   const router = useRouter();
   const [values, setValues] = useState({
-    usuario: "omariosouto",
+    usuario: "lucas.schuch",
     senha: "safepassword",
   });
 

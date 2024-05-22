@@ -1,32 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@guilhermeonrails 
-omariosouto
-/
-03-nextjs-course
-Public
-Code
-Issues
-Pull requests
-11
-Actions
-Projects
-Wiki
-Security
-Insights
-03-nextjs-course/.gitignore
-@omariosouto
-omariosouto A2.1
-Latest commit 3a8c2f9 26 days ago
- History
- 1 contributor
-128 lines (95 sloc)  1.98 KB
-   
 # Logs
 logs
 *.log
@@ -168,3 +139,7 @@ Training
 Blog
 About
 Loading complete
+
+# Include the API routes for the frontend
+!frontend/pages/api/
+!backend/pages/api/
