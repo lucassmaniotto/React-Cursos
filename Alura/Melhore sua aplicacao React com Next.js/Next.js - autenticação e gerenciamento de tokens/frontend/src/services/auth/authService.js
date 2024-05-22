@@ -14,7 +14,7 @@ export const authService = {
     });
   },
 
-  async getSession(context) {
+  async getSession(context = null) {
     return HttpClient(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/session`, {
       method: "GET",
       headers: {
