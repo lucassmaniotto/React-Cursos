@@ -28,7 +28,7 @@ function withSession(func) {
   };
 }
 
-// Para Client Side Rendering
+// Para Static Site Generation
 function useSession() {
   const [session, setSession] = useState(null);
   const [loading, setLoading] = useState(true);
