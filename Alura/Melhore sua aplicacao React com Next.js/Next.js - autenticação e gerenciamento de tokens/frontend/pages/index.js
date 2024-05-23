@@ -18,7 +18,7 @@ export default function HomeScreen() {
 
   // onSubmit -> Controller
   // authService - > Service
-  const handleSubmit = (e) => {
+  const handleSubmit = (e, route) => {
     e.preventDefault();
     authService
       .login({
@@ -26,8 +26,7 @@ export default function HomeScreen() {
         password: values.senha,
       })
       .then((res) => {
-        //router.push("/auth-page-ssr");
-        router.push("/auth-page-static");
+        router.push(route);
       })
       .catch((error) => {
         alert(`Erro: ${error.message}`);
@@ -36,8 +35,28 @@ export default function HomeScreen() {
 
   return (
     <div>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
+      <h1>Login - Auth Page Static</h1>
+      <form onSubmit={(e) => handleSubmit(e, "/auth-page-static")}>
+        <input
+          placeholder="Usuário"
+          name="usuario"
+          defaultValue={values.usuario}
+          onChange={handleChange}
+        />
+        <input
+          placeholder="Senha"
+          name="senha"
+          type="password"
+          defaultValue={values.senha}
+          onChange={handleChange}
+        />
+        <div>
+          <button type="submit">Entrar</button>
+        </div>
+      </form>
+
+      <h1>Login - Auth Page Server Side Render</h1>
+      <form onSubmit={(e) => handleSubmit(e, "/auth-page-ssr")}>
         <input
           placeholder="Usuário"
           name="usuario"

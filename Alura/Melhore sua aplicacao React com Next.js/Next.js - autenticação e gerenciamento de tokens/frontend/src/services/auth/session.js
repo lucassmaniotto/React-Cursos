@@ -5,13 +5,13 @@ import { authService } from "./authService";
 
 // Para Server Side Rendering
 function withSession(func) {
-  return async (context) => {
+  return async (ctx) => {
     try {
-      const session = await authService.getSession(context);
+      const session = await authService.getSession(ctx);
       const modifiedContext = {
-        ...context,
-        request: {
-          ...context.request,
+        ...ctx,
+        req: {
+          ...ctx.req,
           session,
         },
       };
@@ -20,8 +20,8 @@ function withSession(func) {
     } catch (error) {
       return {
         redirect: {
-          destination: "/?error=401",
           permanent: false,
+          destination: "/?error=401",
         },
       };
     }

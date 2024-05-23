@@ -1,38 +1,40 @@
 import nookies from "nookies";
 import { HttpClient } from "../../src/infra/HttpClient/HttpClient";
+import { tokenService } from "../../src/services/auth/tokenService";
 
 const REFRESH_TOKEN_NAME = "REFRESH_TOKEN_NAME";
 
 const controllers = {
   async storeRefreshToken(req, res) {
-    const context = { req, res };
+    const ctx = { req, res };
 
-    nookies.set(context, REFRESH_TOKEN_NAME, req.body.refresh_token, {
+    nookies.set(ctx, REFRESH_TOKEN_NAME, req.body.refresh_token, {
       httpOnly: true,
       sameSite: "lax",
+      path: "/",
     });
 
     res.json({
       data: {
-        message: "Refresh token guardado com sucesso",
+        refresh_token: req.body.refresh_token,
       },
     });
   },
 
-  async displayCookies(req, res) {
-    const context = { req, res };
+/*   async displayCookies(req, res) {
+    const ctx = { req, res };
 
     res.json({
       data: {
-        cookies: nookies.get(context),
+        cookies: nookies.get(ctx),
       },
     });
-  },
+  }, */
 
   async regenerateTokens(req, res) {
-    const context = { req, res };
-    const cookies = nookies.get(context);
-    const refreshToken = cookies[REFRESH_TOKEN_NAME];
+    const ctx = { req, res };
+    const cookies = nookies.get(ctx);
+    const refreshToken = cookies[REFRESH_TOKEN_NAME] || req.body.refresh_token;
 
     const refreshResponse = await HttpClient(
       `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/refresh`,
@@ -45,15 +47,18 @@ const controllers = {
     );
 
     if (refreshResponse.ok) {
-      nookies.set(context, REFRESH_TOKEN_NAME, refreshResponse.refresh_token, {
+      const { access_token, refresh_token } = refreshResponse.body.data;
+
+      nookies.set(ctx, REFRESH_TOKEN_NAME, refresh_token, {
         httpOnly: true,
         sameSite: "lax",
+        path: "/",
       });
 
-      tokenService.save(refreshResponse.body.data.refresh_token, context)
+      tokenService.save(access_token, ctx);
 
-      res.json({
-        refreshResponse,
+      res.status(200).json({
+        data: refreshResponse.body.data,
       });
     } else {
       res.status(401).json({
@@ -67,6 +72,7 @@ const controllers = {
 const controllerBy = {
   POST: controllers.storeRefreshToken,
   GET: controllers.regenerateTokens,
+  PUT: controllers.regenerateTokens,
   // GET: controllers.displayCookies,
 };
 
