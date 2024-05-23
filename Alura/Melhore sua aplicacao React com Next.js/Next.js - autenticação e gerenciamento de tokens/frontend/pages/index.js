@@ -54,7 +54,9 @@ export default function HomeScreen() {
           <button type="submit">Entrar</button>
         </div>
       </form>
-
+      <p>
+        <a href="/auth-page-static">Acessar página Server Client Render sem login</a>
+      </p>
       <h1>Login - Auth Page Server Side Render</h1>
       <form onSubmit={(e) => handleSubmit(e, "/auth-page-ssr")}>
         <input
@@ -74,6 +76,9 @@ export default function HomeScreen() {
           <button type="submit">Entrar</button>
         </div>
       </form>
+      <p>
+        <a href="/auth-page-ssr">Acessar página Server Side Render sem login</a>
+      </p>
     </div>
   );
 }
