@@ -33,14 +33,21 @@ export async function HttpClient(fetchUrl, fetchOptions = {}) {
       const isServer = Boolean(fetchOptions?.ctx);
       const currentRefreshToken =
         fetchOptions?.ctx?.req?.cookies["REFRESH_TOKEN_NAME"];
-      
+
       try {
         // Tenta atualizar os tokens
-        const refreshResponse = await HttpClient("http://localhost:3000/api/refresh", {
-          method: isServer ? "PUT" : "GET",
-          body: isServer ? { refresh_token: currentRefreshToken } : undefined,
-        });
-        
+
+          // O ideal seria ter um endpoint do backend para tratar o refresh token
+          // Por exemplificação será utilizado o API Route do Next.js localizado em frontend/pages/api/refresh
+          
+        const refreshResponse = await HttpClient(
+          "http://localhost:3000/api/refresh",
+          {
+            method: isServer ? "PUT" : "GET",
+            body: isServer ? { refresh_token: currentRefreshToken } : undefined,
+          }
+        );
+
         const newAccessToken = refreshResponse.body.data.access_token;
         const newRefreshToken = refreshResponse.body.data.refresh_token;
 
