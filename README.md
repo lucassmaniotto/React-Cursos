@@ -1,30 +1,14 @@
 ## Sumário
 - [Alura](#alura)
   - [Formações](#formações)
-    <details>
-    <summary>React com JavaScript</summary>
-    
-    - [Explore React com JavaScript](#explore-react-com-javascript)
-    - [Full stack JavaScript: crie um projeto com React e Node.js](#full-stack-javascript-crie-um-projeto-com-react-e-nodejs)
-    </details>
-    
-    <details>
-    <summary>React com Next.js</summary>
-    
-    - [Melhore sua aplicação React com o Next.js](#melhore-sua-aplicação-react-com-o-nextjs)
-    </details>
+    - [React com JavaScript](#react-com-javascript)
+      - [Explore React com JavaScript](#explore-react-com-javascript)
+      - [Full stack JavaScript: crie um projeto com React e Node.js](#full-stack-javascript-crie-um-projeto-com-react-e-nodejs)
+    - [React com Next.js](#react-com-nextjs)
+      - [Melhore sua aplicação React com o Next.js](#melhore-sua-aplicação-react-com-o-nextjs)
   - [Cursos](#cursos)
-    <details>
-    <summary>React com JavaScript</summary>
-    
     - [React com JavaScript](#react-com-javascript-1)
-    </details>
-    
-    <details>
-    <summary>React e Node.js: consumindo APIs no React no projeto full stack</summary>
-    
     - [React e Node.js: consumindo APIs no React no projeto full stack](#react-e-nodejs-consumindo-apis-no-react-no-projeto-full-stack)
-    </details>
 - [Udemy](#udemy)
   - [JavaScript e TypeScript do básico ao avançado](#javascript-e-typescript-do-básico-ao-avançado)
   - [React.Js e Next.Js (Intermediário e Avançado)](#reactjs-e-nextjs-intermediário-e-avançado)
@@ -129,12 +113,15 @@ Formação disponível em: [Alura](https://cursos.alura.com.br/formacao-next-js)
       2. SSG e SSR, e revalidação de dados;
       3. prefetch, Dynamic Import e TypeScript;
       4. API Routes
-   3. [Next.js: autenticação e gerenciamento de Tokens](https://cursos.alura.com.br/course/nextjs-autenticacao-gerenciamento-tokens)
+2. Mergulhos mais profundos no Next.js
+   1. [Next.js: autenticação e gerenciamento de Tokens](https://cursos.alura.com.br/course/nextjs-autenticacao-gerenciamento-tokens)
       1. Visão geral sobre autenticação;
       2. Tokens JWT, Cookies e Storage;
       3. Gerenciamento de sessão;
       4. Refresh e Access Tokens;
       5. Logout e Roles;
+   2. [Next.js: trabalhando com arquitetura Front-end](https://cursos.alura.com.br/course/nextjs-arquitetura-front-end)
+      1. monorepo, microfrontend e arquitetura de pastas;
 
 ## Cursos  
 ### React com JavaScript
