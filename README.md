@@ -149,6 +149,14 @@ Formação disponível em: [Alura](https://cursos.alura.com.br/formacao-next-js)
   1. React Router
   2. Requests com Axios
   3. Tratamento de erros
+ 
+<br>
+<br>
+
+---
+
+<br>
+<br>
 
 # Udemy
 
