@@ -29,6 +29,14 @@
   - [JavaScript e TypeScript do básico ao avançado](#javascript-e-typescript-do-básico-ao-avançado)
   - [React.Js e Next.Js (Intermediário e Avançado)](#reactjs-e-nextjs-intermediário-e-avançado)
 
+<br>
+<br>
+
+---
+
+<br>
+<br>
+
 # Alura
 ## Formações
 ### React com JavaScript
