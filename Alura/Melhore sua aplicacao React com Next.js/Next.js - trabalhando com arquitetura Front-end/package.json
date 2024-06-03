@@ -13,5 +13,11 @@
     "dev:web-public": "yarn web-public dev",
     "build:web-public": "yarn web-public build",
     "start:web-public": "yarn web-public start"
+  },
+  "dependencies": {
+    "@types/styled-components": "^5.1.25",
+    "@types/node": "^20.12.13",
+    "@types/react": "^18.3.3",
+    "typescript": "^5.4.5"
   }
 }

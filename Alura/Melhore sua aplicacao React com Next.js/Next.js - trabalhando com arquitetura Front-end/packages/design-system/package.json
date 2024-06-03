@@ -5,5 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "styled-components": "^6.1.11"
+  },
+  "devDependencies": {
+    "@lucas/tsconfig-commons": "*"
   }
 }

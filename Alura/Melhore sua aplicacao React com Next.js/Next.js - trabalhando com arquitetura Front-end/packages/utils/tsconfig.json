@@ -1,0 +1,3 @@
+{
+  "extends": "@lucas/tsconfig-commons/base.json",
+}
