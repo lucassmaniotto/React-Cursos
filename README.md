@@ -122,7 +122,12 @@ Formação disponível em: [Alura](https://cursos.alura.com.br/formacao-next-js)
       5. Logout e Roles;
    2. [Next.js: trabalhando com arquitetura Front-end](https://cursos.alura.com.br/course/nextjs-arquitetura-front-end)
       1. monorepo, microfrontend e arquitetura de pastas;
-      2. 
+      2. Workspaces,módulos e componentes;
+      3. Linters e formatters;
+      4. Jest e Testing Library;
+      5. Recursos do Github para dependências externas, dependabot e proteção de branches;
+3. Melhore sua experiência de desenvolvimento
+   1. [Next.js: documentando seu Front-end com Storybook](https://cursos.alura.com.br/course/nextjs-documentando-front-end-storybook)
 
 ## Cursos  
 ### React com JavaScript

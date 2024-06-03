@@ -1,12 +1,13 @@
 {
   "name": "@lucas/tsconfig-commons",
-  "version": "1.0.0",
+  "version": "0.0.0",
+  "private": true,
   "main": "index.js",
-  "license": "MIT",
   "files": [
     "base.json"
   ],
   "scripts": {
-    "lint": "echo 'Not implemented yet'"
+    "lint": "echo 'Not implemented'",
+    "test": "echo 'Not implemented'"
   }
 }

@@ -1,13 +1,18 @@
 {
   "name": "@lucas/design-system",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.ts",
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint './**/*.{ts,tsx}'",
+    "test": "jest"
+  },
   "dependencies": {
-    "styled-components": "^6.1.11"
+    "styled-components": "5.3.5",
+    "@lucas/utils": "*"
   },
   "devDependencies": {
-    "@lucas/tsconfig-commons": "*",
-    "@lucas/eslint-commons": "*"
+    "@lucas/eslint-commons": "*",
+    "@lucas/test-commons": "*"
   }
 }
