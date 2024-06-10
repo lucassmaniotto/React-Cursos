@@ -6,6 +6,7 @@
       - [Full stack JavaScript: crie um projeto com React e Node.js](#full-stack-javascript-crie-um-projeto-com-react-e-nodejs)
     - [React com Next.js](#react-com-nextjs)
       - [Melhore sua aplicação React com o Next.js](#melhore-sua-aplicação-react-com-o-nextjs)
+      - [Formação Next.js e Tailwind: construindo um design system](#formação-nextjs-e-tailwind-construindo-um-design-system)
   - [Cursos](#cursos)
     - [React com JavaScript](#react-com-javascript-1)
     - [React e Node.js: consumindo APIs no React no projeto full stack](#react-e-nodejs-consumindo-apis-no-react-no-projeto-full-stack)
@@ -128,6 +129,20 @@ Formação disponível em: [Alura](https://cursos.alura.com.br/formacao-next-js)
       5. Recursos do Github para dependências externas, dependabot e proteção de branches;
 3. Melhore sua experiência de desenvolvimento
    1. [Next.js: documentando seu Front-end com Storybook](https://cursos.alura.com.br/course/nextjs-documentando-front-end-storybook)
+      1. Storybook e importância da documentação;
+      2. MDX;
+      3. Temas e Providers;
+      4. Customização do Storybook;
+      5. Build e Deploy;
+
+#### Formação Next.js e Tailwind: construindo um design system
+Formação disponível em: [Alura](https://cursos.alura.com.br/formacao-next-js-tailwind-design-system)
+
+1. Criando as bases do Design System
+   1. [React: criando um Design System com TailwindCSS](https://cursos.alura.com.br/course/react-criando-design-system-tailwind)
+      1. Next.js e TailwindCSS;
+      2. Atomic Design e Storybook;
+      3. Design Tokens;
 
 ## Cursos  
 ### React com JavaScript
