@@ -143,6 +143,7 @@ Formação disponível em: [Alura](https://cursos.alura.com.br/formacao-next-js-
       1. Next.js e TailwindCSS;
       2. Atomic Design e Storybook;
       3. Design Tokens;
+      4. Color Pallet, Variantes e documentação;
 
 ## Cursos  
 ### React com JavaScript

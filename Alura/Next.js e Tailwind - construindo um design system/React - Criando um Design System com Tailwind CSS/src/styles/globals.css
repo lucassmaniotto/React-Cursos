@@ -4,16 +4,15 @@
 
 @font-face {
   font-family: "Mulish";
-  src: url("../../fonts/Mulish-Regular.ttf") format("truetype");
+  src:
+    url("../../fonts/Mulish-Regular.woff2") format("woff2"),
+    url("../../fonts/Mulish-Regular.woff") format("woff");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   font-family: "Mulish", sans-serif;
 }
 
@@ -46,6 +45,7 @@
     --screen-desktop: 1440px;
     --screen-tv: 1920px;
 
+    /* Shadows */
     --shadow-sm: 0px 0px 10px rgba(132, 132, 132, 15%);
     --shadow-md: 0px 0px 20px rgba(132, 132, 132, 20%);
     --shadow-lg: 0px 0px 30px rgba(132, 132, 132, 25%);
@@ -77,7 +77,7 @@
     /* Font Size */
     --text-xs: 12px;
     --text-sm: 14px;
-    --text-nd: 16px;
+    --text-md: 16px;
     --text-lg: 18px;
     --text-xl: 20px;
   }
