@@ -145,6 +145,11 @@ Formação disponível em: [Alura](https://cursos.alura.com.br/formacao-next-js-
       3. Design Tokens;
       4. Color Pallet, Variantes e documentação;
       5. Componentes e extração de complexidade;
+   2. [React: eleve o nível da sua documentação no Storybook](https://cursos.alura.com.br/course/react-eleve-nivel-documentacao-storybook)
+      1. Atomic Design, estilização condicional e CVA;
+      2. Composição de componentes e OCP;
+      3. Headless UI e acessibilidade;
+      4. Personalização do Storybook;
 
 ## Cursos  
 ### React com JavaScript
