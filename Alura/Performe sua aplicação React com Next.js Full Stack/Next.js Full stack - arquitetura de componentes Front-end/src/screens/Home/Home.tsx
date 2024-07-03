@@ -1,12 +1,11 @@
 import Box from "@src/components/Box";
 import Text from "@src/components/Text";
-
 import Background from "./patterns/Background/Background";
-import Menu from "./patterns/Menu/Menu";
 import Feed from "./patterns/Feed/Feed";
 import Footer from "./patterns/Footer/Footer";
+import Menu from "./patterns/Menu/Menu";
 
-export default function Home() {
+export default function HomeScreen() {
   return (
     <Box
       tag="main"
@@ -18,7 +17,9 @@ export default function Home() {
       <Menu />
       <Feed>
         <Feed.Header />
-        <Text tag="h1" variant="heading1">Últimas Atualizações</Text>
+        <Text tag="h2" variant="heading1">
+          Últimas Atualizações
+        </Text>
         <Feed.Posts />
       </Feed>
       <Footer />
