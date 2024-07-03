@@ -171,6 +171,7 @@ Formação disponível em: [Alura](https://cursos.alura.com.br/formacao-react-ne
 1. Construa componentes escaláveis e performáticos com Next.js e File System
    1. [Next.js Full stack: arquitetura de componentes Front-end](https://cursos.alura.com.br/course/nextjs-fullstack-arquitetura-componentes-front-end)
       1. Conceitos de design system;
+      2. GlobalStyles e ThemeProvider;
 
 ## Cursos  
 ### React com JavaScript
