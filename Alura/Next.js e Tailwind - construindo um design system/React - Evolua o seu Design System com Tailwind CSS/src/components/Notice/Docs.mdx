@@ -1,0 +1,28 @@
+import { Meta, Primary, Canvas, Controls } from "@storybook/blocks";
+
+import * as Story from "./Notice.stories.tsx";
+
+<Meta of={Story} />
+
+# Notice
+
+O componente `Notice` é utilizado para exibir mensagens de alerta, erro, sucesso ou informação.
+
+## Exemplo de uso
+
+### Notice Success
+
+<Canvas of={Story.NoticeSuccess} />
+
+### Notice Alert
+
+<Canvas of={Story.NoticeAlert} />
+
+### Notice Error
+
+<Canvas of={Story.NoticeError} />
+
+## Documentação Interativa
+
+<Primary />
+<Controls />

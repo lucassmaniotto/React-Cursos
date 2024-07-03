@@ -150,6 +150,19 @@ Formação disponível em: [Alura](https://cursos.alura.com.br/formacao-next-js-
       2. Composição de componentes e OCP;
       3. Headless UI e acessibilidade;
       4. Personalização do Storybook;
+2. Documentação e versionamento
+   1. [React: eleve o nível da sua documentação no Storybook](https://cursos.alura.com.br/course/react-eleve-nivel-documentacao-storybook)
+      1. Criação de componentes com Headless UI;
+      2. Decorators e Render - Storybook;
+      3. Exibição e documentação de componentes;
+      4. Plugins e Addons;
+      5. Chromatic e Vercel;
+   2. [React: versione e publique o seu Design System](https://cursos.alura.com.br/course/react-versione-publique-design-system)
+      1. Publicação no NPM;
+      2. Consumo do Design System;
+      3. Breaking changes
+      4. Versionamento semântico;
+      5. Licensas de software;
 
 ## Cursos  
 ### React com JavaScript
