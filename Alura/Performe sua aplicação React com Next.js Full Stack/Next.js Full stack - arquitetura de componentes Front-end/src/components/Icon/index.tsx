@@ -1,4 +1,4 @@
-import { BaseComponent } from "@src/theme/BaseComponent";
+import BaseComponent from "@src/theme/BaseComponent";
 import { StyleSheet } from "@src/theme/StyleSheet";
 import * as icons from "./svg/_index";
 
@@ -10,23 +10,24 @@ const iconSizes = {
   xl: "36px",
 } as const;
 
-interface IconProps {
+interface IconProps extends React.HTMLAttributes<SVGElement> {
   name: keyof typeof icons;
   styleSheet?: StyleSheet;
   size?: keyof typeof iconSizes;
 }
-export default function Icon({ size, name }: IconProps) {
+
+const Icon: React.FC<IconProps> = ({ size = "md", name ="default_icon", ...rest }) => {
   const CurrentIcon = icons[name];
   if (!CurrentIcon)
     return (
       <>
-        "${name}" is not a valid <Icon />
+        "${name}" is not valid icon name.
       </>
     );
   return (
     <BaseComponent
       as="svg"
-      styleSheet={{
+      $styleSheet={{
         width: iconSizes[size],
         height: iconSizes[size],
       }}
@@ -34,13 +35,11 @@ export default function Icon({ size, name }: IconProps) {
       fill="currentColor"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
+      {...rest}
     >
       <CurrentIcon />
     </BaseComponent>
   );
-}
-
-Icon.defaultProps = {
-  name: "default_icon",
-  size: "md",
 };
+
+export default Icon;

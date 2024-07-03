@@ -3,20 +3,24 @@ import styled from "styled-components";
 import { StyleSheet } from "@src/theme/StyleSheet";
 import { parseStyleSheet } from "@skynexui/responsive_stylesheet";
 
-interface StyledBaseComponent {
-  styleSheet?: StyleSheet;
+interface StyledBaseComponentProps {
+  $styleSheet?: StyleSheet;
+  [key: string]: any;
 }
-const StyledBaseComponent = styled.div<StyledBaseComponent>`
+
+const StyledBaseComponent = styled.div<StyledBaseComponentProps>`
   display: flex;
   flex-direction: column;
   align-content: flex-start;
   flex-shrink: 0;
-  ${({ styleSheet }) => parseStyleSheet(styleSheet)}
+  ${({ $styleSheet }) => $styleSheet && parseStyleSheet($styleSheet)}
 `;
 
-export const BaseComponent = (props) => {
-  return <StyledBaseComponent {...props} />;
+const BaseComponent: React.FC<StyledBaseComponentProps> = ({
+  styleSheet = {},
+  ...rest
+}) => {
+  return <StyledBaseComponent $styleSheet={styleSheet} {...rest} />;
 };
-BaseComponent.defaultProps = {
-  styleSheet: {},
-};
+
+export default BaseComponent;
