@@ -7,6 +7,7 @@
     - [React com Next.js](#react-com-nextjs)
       - [Melhore sua aplicação React com o Next.js](#melhore-sua-aplicação-react-com-o-nextjs)
       - [Formação Next.js e Tailwind: construindo um design system](#formação-nextjs-e-tailwind-construindo-um-design-system)
+      - [Performe sua aplicação React com Next.js Full stack](#performe-sua-aplicação-react-com-nextjs-full-stack)
   - [Cursos](#cursos)
     - [React com JavaScript](#react-com-javascript-1)
     - [React e Node.js: consumindo APIs no React no projeto full stack](#react-e-nodejs-consumindo-apis-no-react-no-projeto-full-stack)
@@ -163,6 +164,13 @@ Formação disponível em: [Alura](https://cursos.alura.com.br/formacao-next-js-
       3. Breaking changes
       4. Versionamento semântico;
       5. Licensas de software;
+
+#### Performe sua aplicação React com Next.js Full stack
+Formação disponível em: [Alura](https://cursos.alura.com.br/formacao-react-nextjs-fullstack)
+
+1. Construa componentes escaláveis e performáticos com Next.js e File System
+   1. [Next.js Full stack: arquitetura de componentes Front-end](https://cursos.alura.com.br/course/nextjs-fullstack-arquitetura-componentes-front-end)
+      1. Conceitos de design system;
 
 ## Cursos  
 ### React com JavaScript
