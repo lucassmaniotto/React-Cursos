@@ -1,7 +1,7 @@
 import React from "react";
+import { useRouter } from "next/router";
 
 import Text from "../Text";
-import Link from "../Link/Link";
 
 import { ThemeTypographyVariants } from "@src/theme/theme";
 import { StyleSheet } from "@src/theme/StyleSheet";
@@ -12,11 +12,12 @@ const StyledButton = styled(Text)<any>`
   ${({ $styleSheet }) => $styleSheet}
 `;
 
-interface ButtonBaseProps {
+export interface ButtonBaseProps {
   children: React.ReactNode;
   textVariant?: ThemeTypographyVariants;
   styleSheet?: StyleSheet;
   href?: string;
+  fullWidth?: boolean;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
@@ -25,30 +26,35 @@ export default function ButtonBase({
   textVariant,
   styleSheet,
   href,
+  fullWidth,
   ...props
 }: ButtonBaseProps) {
   const isLink = Boolean(href);
   const Tag = isLink ? "a" : "button";
+  const router = useRouter();
   return (
-    <MyRipples>
+    <MyRipples width={fullWidth ? "100%" : "auto"}>
       <StyledButton
         tag={Tag}
         variant={textVariant}
+        href={href}
         $styleSheet={{
           border: "none",
           backgroundColor: "transparent",
           color: "inherit",
           outline: "none",
           textDecoration: "none",
-          width: "100%",
+          cursor: "pointer",
           ...styleSheet,
         }}
         onClick={(e) => {
+          isLink && e.preventDefault();
+          isLink && router.push(href);
           !isLink && props.onClick && props.onClick(e);
         }}
         {...props}
       >
-        {isLink ? <Link href={href}>{children}</Link> : children}
+        {children}
       </StyledButton>
     </MyRipples>
   );

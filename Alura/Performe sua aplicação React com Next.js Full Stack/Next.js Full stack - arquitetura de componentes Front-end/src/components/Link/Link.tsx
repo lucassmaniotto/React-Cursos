@@ -2,7 +2,7 @@ import React from "react";
 import NextLink from "next/link";
 import Text from "../Text";
 import { StyleSheet } from "@src/theme/StyleSheet";
-import { ThemeTypographyVariants } from "@src/theme/theme";
+import { ThemeColors, ThemeTypographyVariants } from "@src/theme/theme";
 import { useTheme } from "@src/theme/ThemeProvider";
 
 interface LinkProps {
@@ -11,13 +11,7 @@ interface LinkProps {
   styleSheet?: StyleSheet;
   variant?: ThemeTypographyVariants;
   colorVariantEnabled?: boolean;
-  colorVariant?:
-    | "primary"
-    | "accent"
-    | "neutral"
-    | "negative"
-    | "success"
-    | "warning";
+  colorVariant?: ThemeColors;
 }
 
 const Link = React.forwardRef(
