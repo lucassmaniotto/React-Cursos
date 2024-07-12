@@ -4,15 +4,21 @@ import Background from "./patterns/Background/Background";
 import Feed from "./patterns/Feed/Feed";
 import Footer from "./patterns/Footer/Footer";
 import Menu from "./patterns/Menu/Menu";
+import { useTheme } from "@src/theme/ThemeProvider";
+import Link from "@src/components/Link/Link";
 
 export default function HomeScreen() {
+  const theme = useTheme();
+
   return (
     <Box
       tag="main"
       styleSheet={{
         flex: 1,
+        backgroundColor: theme.colors.positive.x100,
       }}
     >
+      <Link href="/sobre">Sobre</Link>
       <Background />
       <Menu />
       <Feed>

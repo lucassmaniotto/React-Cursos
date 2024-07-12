@@ -16,14 +16,13 @@ interface IconProps extends React.HTMLAttributes<SVGElement> {
   size?: keyof typeof iconSizes;
 }
 
-const Icon: React.FC<IconProps> = ({ size = "md", name ="default_icon", ...rest }) => {
+const Icon: React.FC<IconProps> = ({
+  size = "md",
+  name = "default_icon",
+  ...rest
+}) => {
   const CurrentIcon = icons[name];
-  if (!CurrentIcon)
-    return (
-      <>
-        "${name}" is not valid icon name.
-      </>
-    );
+  if (!CurrentIcon) return <>"${name}" is not valid icon name.</>;
   return (
     <BaseComponent
       as="svg"
