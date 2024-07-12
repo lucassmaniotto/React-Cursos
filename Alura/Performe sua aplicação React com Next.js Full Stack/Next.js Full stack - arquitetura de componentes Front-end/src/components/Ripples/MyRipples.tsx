@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 interface StyledRippleProps {
   width?: string;
+  borderRadius?: string;
 }
 
 const Ripple = createRipples({
@@ -15,18 +16,21 @@ const StyledRipple = styled.div<StyledRippleProps>`
   display: inline-block;
   overflow: hidden;
   width: ${({ width }) => width};
+  border-radius: ${({ borderRadius }) => borderRadius};
 
   & > * {
     width: ${({ width }) => width};
   }
 `;
 
-export default function MyRipple({ children, width }: StyledRippleProps & { children: React.ReactNode }) {
+export default function MyRipple({
+  children,
+  width,
+  borderRadius,
+}: StyledRippleProps & { children: React.ReactNode }) {
   return (
-    <StyledRipple width={width}>
-      <Ripple>
-        {children}
-      </Ripple>
+    <StyledRipple width={width} borderRadius={borderRadius}>
+      <Ripple>{children}</Ripple>
     </StyledRipple>
   );
 }

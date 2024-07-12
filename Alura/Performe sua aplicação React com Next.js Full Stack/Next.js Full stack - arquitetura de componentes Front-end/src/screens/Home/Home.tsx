@@ -15,10 +15,10 @@ export default function HomeScreen() {
       tag="main"
       styleSheet={{
         flex: 1,
-        backgroundColor: theme.colors.positive.x100,
+        backgroundColor: theme.colors.neutral.x000,
+        alignItems: "center",
       }}
     >
-      <Link href="/sobre">Sobre</Link>
       <Background />
       <Menu />
       <Feed>

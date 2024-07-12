@@ -29,6 +29,8 @@ export default function Button({
         ...colorVariantBy(theme, colorVariant, variant),
         ...buttonSize[size],
         ...styleSheet,
+        width: fullWidth ? "100%" : "auto",
+        alignItems: "center",
       }}
       fullWidth={fullWidth}
     >

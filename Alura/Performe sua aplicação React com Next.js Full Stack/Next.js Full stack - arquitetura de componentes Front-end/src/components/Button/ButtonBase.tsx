@@ -18,6 +18,7 @@ export interface ButtonBaseProps {
   styleSheet?: StyleSheet;
   href?: string;
   fullWidth?: boolean;
+  borderRadiusRipple?: string;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
@@ -27,13 +28,14 @@ export default function ButtonBase({
   styleSheet,
   href,
   fullWidth,
+  borderRadiusRipple = "0px",
   ...props
 }: ButtonBaseProps) {
   const isLink = Boolean(href);
   const Tag = isLink ? "a" : "button";
   const router = useRouter();
   return (
-    <MyRipples width={fullWidth ? "100%" : "auto"}>
+    <MyRipples width={fullWidth ? "100%" : "auto"} borderRadius={borderRadiusRipple}>
       <StyledButton
         tag={Tag}
         variant={textVariant}
