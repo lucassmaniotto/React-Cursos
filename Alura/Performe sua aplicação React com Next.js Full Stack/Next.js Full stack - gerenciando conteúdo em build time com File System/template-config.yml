@@ -1,0 +1,10 @@
+site:
+  title: "Lucas Smaniotto - Timeline"
+  description: "Bem vindo a minha timeline pessoal"
+personal: 
+  name: "Lucas Smaniotto"
+  avatar: "https://github.com/lucassmaniotto.png"
+  socialNetworks:
+    github: "https://github.com/lucassmaniotto"
+    twitter: "https://twitter.com/alpiste_punk"
+    instagram: "https://instagram/licaaaaas"

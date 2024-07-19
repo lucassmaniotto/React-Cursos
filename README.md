@@ -172,6 +172,11 @@ Formação disponível em: [Alura](https://cursos.alura.com.br/formacao-react-ne
    1. [Next.js Full stack: arquitetura de componentes Front-end](https://cursos.alura.com.br/course/nextjs-fullstack-arquitetura-componentes-front-end)
       1. Conceitos de design system;
       2. GlobalStyles e ThemeProvider;
+      3. Ripple Effect e Estilizações;
+      4. Layout e Figma;
+   2. [Next.js Full stack: gerenciando conteúdo em build time com File System](https://cursos.alura.com.br/course/nextjs-fullstack-conteudo-build-time-file-system)
+      1. CMS e .yml;
+      2. Arquivos de configuração .yml, HOC e dinamismo;
 
 ## Cursos  
 ### React com JavaScript
