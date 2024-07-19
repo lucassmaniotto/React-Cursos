@@ -5,13 +5,14 @@ import matter from "gray-matter";
 export interface Post {
   metadata: {
     date: string;
-    url?: string;
-    excerpt?: string;
+    url: string;
+    excerpt: string;
     tags: string[];
   };
   slug: string;
   title: string;
   content: string;
+  image?: string;
 }
 
 export default function PostsService() {
@@ -34,6 +35,7 @@ export default function PostsService() {
           slug: postFileName.replace(/\.md$/, ""),
           title: data.title,
           content: content,
+          image: data.image || ""
         };
 
         return post;

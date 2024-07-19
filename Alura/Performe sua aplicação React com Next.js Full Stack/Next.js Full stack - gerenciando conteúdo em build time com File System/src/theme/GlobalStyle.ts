@@ -1,7 +1,13 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   // [NextJS Reset]
+    html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   html {
     display: flex;
     min-height: 100%;
@@ -9,12 +15,12 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     display: flex;
+    min-height: 100%;
     flex: 1;
     flex-direction: column;
   }
   #__next {
     width: 100%;
-    overflow: hidden;
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -22,6 +28,7 @@ const GlobalStyle = createGlobalStyle`
     justify-content: flex-start;
     align-content: flex-start;
     flex-shrink: 0;
+    min-height: 100vh;
   }
   // ============
   // [Dark Mode Styles]
@@ -37,6 +44,5 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
 `;
-
 
 export default GlobalStyle;

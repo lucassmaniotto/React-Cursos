@@ -16,8 +16,8 @@ export default function Footer() {
         backgroundColor: theme.colors.neutral.x999,
         color: theme.colors.neutral.x000,
         padding: "24px",
-        position: "absolute",
-        bottom: 0,
+        position: "relative",
+        marginTop: "auto",
       }}
     >
       <Text
