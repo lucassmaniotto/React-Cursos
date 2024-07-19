@@ -177,6 +177,7 @@ Formação disponível em: [Alura](https://cursos.alura.com.br/formacao-react-ne
    2. [Next.js Full stack: gerenciando conteúdo em build time com File System](https://cursos.alura.com.br/course/nextjs-fullstack-conteudo-build-time-file-system)
       1. CMS e .yml;
       2. Arquivos de configuração .yml, HOC e dinamismo;
+      3. Gerenciamento de arquivos markdown;
 
 ## Cursos  
 ### React com JavaScript
